@@ -1,10 +1,14 @@
-package com.maxproit.androidroomdatabase;
+package com.maxproit.androidroomdatabase.viewmodel;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+
+import com.maxproit.androidroomdatabase.model.Note;
+import com.maxproit.androidroomdatabase.db.NoteDao;
+import com.maxproit.androidroomdatabase.db.NoteRoomDatabase;
 
 import java.util.List;
 

@@ -1,9 +1,11 @@
-package com.maxproit.androidroomdatabase;
+package com.maxproit.androidroomdatabase.db;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
+
+import com.maxproit.androidroomdatabase.model.Note;
 
 @Database(entities = Note.class, version = 1)
 public abstract class NoteRoomDatabase extends RoomDatabase {

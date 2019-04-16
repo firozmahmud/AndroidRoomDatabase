@@ -1,4 +1,4 @@
-package com.maxproit.androidroomdatabase;
+package com.maxproit.androidroomdatabase.view;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.maxproit.androidroomdatabase.model.Note;
+import com.maxproit.androidroomdatabase.viewmodel.NoteViewModel;
+import com.maxproit.androidroomdatabase.R;
 
 import java.util.List;
 
@@ -64,8 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
                 StringBuilder stringBuilder = new StringBuilder();
                 for (Note note : notes) {
-                    stringBuilder.append(note.noteTxt).append("\n\n");
-
+                    stringBuilder.append(note.noteTxt).append("\n");
                 }
 
                 txt.setText(stringBuilder);
