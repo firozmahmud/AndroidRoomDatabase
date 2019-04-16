@@ -2,8 +2,11 @@ package com.maxproit.androidroomdatabase;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+
+import java.util.List;
 
 public class NoteViewModel extends AndroidViewModel {
 
@@ -27,6 +30,11 @@ public class NoteViewModel extends AndroidViewModel {
 
     public void insert(Note note) {
         new InsertAsyncTask(noteDao).execute(note);
+    }
+
+    public LiveData<List<Note>> getAllNotes() {
+
+        return noteDao.getAllNotes();
     }
 }
 
